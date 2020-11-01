@@ -6,7 +6,9 @@ build-dev:
 
 # If run command line no need for "shell"
 run-dev:
-	docker run -d  -v $(shell pwd):/usr/app  -p 3000:3000 annieannie/docker-react-aws
+	docker-compose down
+	docker-compose up
+	# docker run -d  -v $(shell pwd):/usr/app  -p 3000:3000 annieannie/docker-react-aws
 
 run-live:
 	docker run -d -p 8082:80 annieannie/docker-react-aws
