@@ -11,18 +11,3 @@ before_install:
 
 script:
   - docker run hello yarn test
-#   Alternative build: - exiting with 137 - awaiting debug turn on by travis team
-
-# sudo: required
-# language: generic
-
-# services:
-#   - docker
-
-# install:
-#   - git clone https://github.com/annie-annie/docker-react-aws.git
-#   - cd docker-react-aws
-
-# script:
-#   - docker-compose up
-#   - docker exec -it dra_web yarn test
