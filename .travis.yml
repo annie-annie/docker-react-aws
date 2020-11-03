@@ -11,3 +11,15 @@ before_install:
 
 script:
   - docker run hello yarn test
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'eu-west-1'
+  app: 'docker-react-aws'
+  env: 'DockerReacrtAws-env'
+  bucket_name: 'elasticbeanstalk-eu-west-1-663264990597'
+  bucket_path: 'docker-react-aws'
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  on:
+    branch: main
